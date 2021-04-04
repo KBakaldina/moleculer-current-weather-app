@@ -7,11 +7,35 @@ const app = new Vue({
 		return {
 			menu: [
 				{ id: 'home', caption: 'Home' },
+				{ id: 'weather', caption: 'Current weather service' },
 			],
 
 			page: 'home',
 
-			requests: {},
+			requests: {
+				weather: [
+					{
+						id: 'in', action: 'weather.temperature', rest: '/api/weather/temperature',
+						fields: [
+							{ field: 'city', label: 'City', type: 'text', paramType: 'param', model: 'cityAName' },
+						],
+						response: null, status: null, duration: null,
+					},
+					{
+						id: 'diff', action: 'weather.temperatureDiff', rest: '/api/weather/temperature/diff',
+						fields: [
+							{ field: 'cityA', label: 'City A', type: 'text', paramType: 'param', model: 'cityAName' },
+							{ field: 'cityB', label: 'City B', type: 'text', paramType: 'param', model: 'cityBName' },
+						],
+						response: null, status: null, duration: null,
+					},
+				],
+			},
+
+			fields: {
+				cityAName: 'Antananarivo',
+				cityBName: 'Moscow',
+			},
 
 			services: [],
 			actions: {},
