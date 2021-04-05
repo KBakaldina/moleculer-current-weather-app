@@ -25,6 +25,7 @@ This is a [Moleculer](https://moleculer.services/)-based microservices project. 
 
 Note:
 - OPEN_WEATHER_API_KEY is an api key to use http://api.openweathermap.org
+- SEND_MAIL_TO is an email which will receive notifications from the app
 
 ### Installation
 
@@ -48,6 +49,7 @@ $ npm run start
 ## Services
 - **api**: API Gateway services
 - **weather**: Service with `temperature` and `temperatureDiff` actions.
+- **mail**: Service with `send` method.
 
 ## NPM scripts
 - `npm run dev`: Start development mode (load all services locally with hot-reload & REPL)
