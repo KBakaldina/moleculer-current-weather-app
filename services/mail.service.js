@@ -6,6 +6,14 @@ module.exports = {
 
 	name: 'mail',
 
+	events: {
+		async 'need:warm'({ message, warmerCity }) {
+			const to = process.env.SEND_MAIL_TO;
+			const subject = `Lets go to ${warmerCity}!`;
+			await this.send(to, subject, message);
+		},
+	},
+
 	methods: {
 
 		// TODO: check why emails are sent but not received

@@ -38,6 +38,7 @@ module.exports = {
 			/** @param {Context} ctx  */
 			async handler(ctx) {
 				const payload = await this.getTemperatureDiff(ctx.params.cityA, ctx.params.cityB);
+				if (payload.diff > 10) { ctx.emit('need:warm', payload); }
 				return payload;
 			},
 		},

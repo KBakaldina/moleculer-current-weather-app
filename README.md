@@ -49,7 +49,7 @@ $ npm run start
 ## Services
 - **api**: API Gateway services
 - **weather**: Service with `temperature` and `temperatureDiff` actions.
-- **mail**: Service with `send` method.
+- **mail**: Service with `need:warm` event and `send` method.
 
 ## NPM scripts
 - `npm run dev`: Start development mode (load all services locally with hot-reload & REPL)
