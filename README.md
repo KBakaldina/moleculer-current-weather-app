@@ -49,7 +49,7 @@ $ npm install
 ```
 <br />
 
-#### 4. Running the app
+#### 3. Running the app
 
 ```bash
 # development
@@ -59,7 +59,7 @@ $ npm run dev
 $ npm run start
 ```
 
-#### 3. Open http://localhost:3000 to test this app
+#### 4. Open http://localhost:3000 to test this app
 
 ## Services
 - **api**: API Gateway services
