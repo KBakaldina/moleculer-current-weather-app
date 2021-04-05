@@ -5,6 +5,8 @@ This is a [Moleculer](https://moleculer.services/)-based microservices project. 
 
 ## Getting started
 
+The application can be started using either Docker or Manual set up.
+
 ### Set up environment variables
 <details>
     <summary>For local development</summary>
@@ -27,24 +29,37 @@ Note:
 - OPEN_WEATHER_API_KEY is an api key to use http://api.openweathermap.org
 - SEND_MAIL_TO is an email which will receive notifications from the app
 
-### Installation
+### Docker
+#### 1. Make sure you did the step "Set up environment variables"
+
+#### 2. Build and run docker containers
+```bash
+$ npm run dc:up
+```
+
+#### 3. Visit http://localhost:3000 to test this app
+
+### Manual set up
+#### 1. Make sure you did the step "Set up environment variables"
+
+#### 2. Installation
 
 ```bash
 $ npm install
 ```
 <br />
 
-### Running the app
+#### 4. Running the app
 
 ```bash
 # development
 $ npm run dev
 
-# debugging mode
+# start
 $ npm run start
 ```
 
-### Open http://localhost:3000 to test this app
+#### 3. Open http://localhost:3000 to test this app
 
 ## Services
 - **api**: API Gateway services
@@ -56,3 +71,6 @@ $ npm run start
 - `npm run start`: Start production mode (set `SERVICES` env variable to load certain services)
 - `npm run cli`: Start a CLI and connect to production. Don't forget to set production namespace with `--ns` argument in script
 - `npm run lint`: Run ESLint
+- `npm run dc:up`: Start the stack with Docker Compose
+- `npm run dc:down`: Stop the stack with Docker Compose
+- `npm run dc:logs`: View Docker Compose logs
